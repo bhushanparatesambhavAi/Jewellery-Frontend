@@ -122,7 +122,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenAuthModal }) => {
                 {link.name}
               </NavLink>
               {openDropdown === link.name && menuData && (
-                 <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 invisible group-hover:visible opacity-0 group-hover:opacity-100 transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
                       {/* Sidebar */}
                       <div className="w-[20%] py-6 pr-6 border-r border-gray-200">
