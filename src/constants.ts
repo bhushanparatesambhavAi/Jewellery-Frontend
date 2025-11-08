@@ -14,7 +14,7 @@ import {
   IconGemstone,
   IconPlatinum,
   IconRoseGold,
-} from './components';
+} from './components/Icons';
 
 export const MAIN_NAV_LINKS = [
   { name: 'All Jewellery', href: '/products/all' },
