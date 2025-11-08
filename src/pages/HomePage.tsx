@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Product } from '../types';
 import { fetchProducts } from '../services/geminiService';
 import ProductCard from '../components/ProductCard';
+import { WhyChooseUs } from '../components';
 
 const HeroSection: React.FC = () => (
     <div className="relative bg-gray-100 h-[60vh] md:h-[80vh] flex items-center justify-center text-center">
@@ -37,28 +38,6 @@ const FeaturedCategories: React.FC = () => {
                             </div>
                             <h3 className="mt-4 text-lg font-serif">{cat.name}</h3>
                         </Link>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const BrandAssurance: React.FC = () => {
-    const assurances = [
-        { icon: '💎', title: 'Quality Craftsmanship' },
-        { icon: '🌿', title: 'Ethically Sourced' },
-        { icon: '🔍', title: '100% Transparency' },
-    ];
-    return (
-        <section className="bg-gray-50 py-16">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    {assurances.map(item => (
-                        <div key={item.title} className="p-6">
-                            <div className="text-5xl mb-4">{item.icon}</div>
-                            <h3 className="text-xl font-serif font-semibold">{item.title}</h3>
-                        </div>
                     ))}
                 </div>
             </div>
@@ -101,7 +80,7 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
             
-            <BrandAssurance />
+            <WhyChooseUs />
 
             {/* Other sections can be added here following the same pattern */}
         </div>
