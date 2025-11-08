@@ -134,3 +134,50 @@ export const IconAstrology: React.FC<IconProps> = ({ className }) => (
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 12c4.97056 0 9 4.02944 9 9" />
     </svg>
 );
+
+// Menu Icons
+export const IconAllJewellery: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9a9 9 0 119 0zM12 2.25v6" /></svg>
+);
+export const IconEarrings: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a5.25 5.25 0 015.25 5.25c0 4.08-3.36 7.5-5.25 7.5S6.75 16.08 6.75 12a5.25 5.25 0 015.25-5.25z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12v3.75" /></svg>
+);
+export const IconPendants: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5-7.5 7.5-7.5-7.5z" /></svg>
+);
+export const IconFingerRings: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 00-9-9 3.375 3.375 0 01-3.41-3.23c-.04-.52-.002-1.048.11-1.55.22-1 .61-1.928 1.18-2.73C3.6 2.62 6.63 1.5 10.03 1.5c3.4 0 6.43 1.12 8.28 3.02 1.85 1.9 2.58 4.38 2.58 6.75a9 9 0 01-9 9z" /></svg>
+);
+export const IconMangalsutra: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" /></svg>
+);
+export const IconChains: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5.25 8.25h13.5m-13.5 7.5h13.5" /></svg>
+);
+export const IconNecklaces: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21.75c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5 7.5 3.358 7.5 7.5-3.358 7.5-7.5 7.5zM12 4.5v-3" /></svg>
+);
+export const IconBangles: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="12" r="8.25" /></svg>
+);
+export const IconBracelets: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H9.75A2.25 2.25 0 007.5 6v2.25m9 7.5v2.25a2.25 2.25 0 01-2.25 2.25H9.75a2.25 2.25 0 01-2.25-2.25V15.75m0-7.5h9" /></svg>
+);
+export const IconNosePin: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12.75V18" /></svg>
+);
+export const IconGoldCoin: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="12" r="7.5" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 15.75V8.25" /><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 9.75H13.5" /></svg>
+);
+export const IconDiamond: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21.75L4.5 9.75h15L12 21.75z" /><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 9.75L9.75 3h4.5l5.25 6.75" /><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75h4.5" /></svg>
+);
+export const IconGemstone: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M14.25 21.75L12 17.25l-2.25 4.5" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 17.25L4.5 9.75h15L12 17.25z" /></svg>
+);
+export const IconPlatinum: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" /></svg>
+);
+export const IconRoseGold: React.FC<IconProps> = ({ className }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75V3.75m0 3a3 3 0 00-3 3h-1.5a4.5 4.5 0 014.5-4.5v0zM12 6.75v3m0 0a3 3 0 013 3h1.5a4.5 4.5 0 00-4.5-4.5v0zm0 3h-1.5a3 3 0 00-3 3v1.5a4.5 4.5 0 004.5 4.5v0zm0 0h1.5a3 3 0 013 3v1.5a4.5 4.5 0 01-4.5 4.5v0z" /></svg>
+);
