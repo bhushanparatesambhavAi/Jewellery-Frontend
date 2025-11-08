@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Header, Footer, AuthModal } from './components';
-import { HomePage, ProductListingPage } from './pages';
+import { HomePage, ProductListingPage, ProfilePage } from './pages';
 
 const App: React.FC = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -24,6 +24,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/products/:category" element={<ProductListingPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         </main>
         <Footer />

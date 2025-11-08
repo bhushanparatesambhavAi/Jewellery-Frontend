@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IconX } from './Icons';
 
 interface AuthModalProps {
@@ -9,6 +10,7 @@ interface AuthModalProps {
 
 const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialView = 'login' }) => {
   const [view, setView] = useState(initialView);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setView(initialView);
@@ -33,6 +35,15 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialView = 'l
   }, [isOpen, handleEsc]);
 
   if (!isOpen) return null;
+  
+  const handleRegisterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // In a real app, you'd handle form submission to your backend here.
+    // On success, you would then close the modal and navigate.
+    onClose();
+    navigate('/profile');
+  };
+
 
   const LoginView = () => (
     <>
@@ -70,7 +81,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialView = 'l
   const RegisterView = () => (
     <>
       <h2 id="auth-modal-title" className="text-2xl font-serif text-center mb-6 text-gray-800">Create an Account</h2>
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form onSubmit={handleRegisterSubmit}>
         <div className="space-y-4">
           <div>
             <label htmlFor="register-name" className="block text-sm font-medium text-gray-700 sr-only">Full Name</label>
