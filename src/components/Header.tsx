@@ -1,11 +1,13 @@
-import React, { useState, FC } from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { MAIN_NAV_LINKS, MEGA_MENU_DATA } from '../constants';
 import * as Icons from './Icons';
 
-type IconName = keyof typeof Icons;
+interface HeaderProps {
+  onOpenAuthModal: (view?: 'login' | 'register') => void;
+}
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({ onOpenAuthModal }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [activeSubCategoryKey, setActiveSubCategoryKey] = useState<string | null>(null);
@@ -89,13 +91,15 @@ const Header: React.FC = () => {
 
           <div className="flex items-center space-x-4">
             <div className="hidden sm:flex items-center space-x-4">
-              <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconUser className="h-6 w-6" /></a>
-              <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconHeart className="h-6 w-6" /></a>
-              <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconMapPin className="h-6 w-6" /></a>
-              <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconShoppingCart className="h-6 w-6" /></a>
+              <button onClick={() => onOpenAuthModal('login')} className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Account">
+                <Icons.IconUser className="h-6 w-6" />
+              </button>
+              <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Wishlist"><Icons.IconHeart className="h-6 w-6" /></a>
+              <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Store Locator"><Icons.IconMapPin className="h-6 w-6" /></a>
+              <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Shopping Cart"><Icons.IconShoppingCart className="h-6 w-6" /></a>
             </div>
             <div className="lg:hidden">
-              <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-600">
+              <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-600" aria-label="Open menu">
                 {isMobileMenuOpen ? <Icons.IconX className="h-6 w-6" /> : <Icons.IconMenu className="h-6 w-6" />}
               </button>
             </div>
@@ -183,10 +187,10 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className="sm:hidden flex justify-center items-center space-x-6 py-4 border-t">
-            <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconUser className="h-7 w-7" /></a>
-            <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconHeart className="h-7 w-7" /></a>
-            <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconMapPin className="h-7 w-7" /></a>
-            <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors"><Icons.IconShoppingCart className="h-7 w-7" /></a>
+            <button onClick={() => { onOpenAuthModal('login'); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Account"><Icons.IconUser className="h-7 w-7" /></button>
+            <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Wishlist"><Icons.IconHeart className="h-7 w-7" /></a>
+            <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Store Locator"><Icons.IconMapPin className="h-7 w-7" /></a>
+            <a href="#" className="text-gray-600 hover:text-[#D4AF37] transition-colors" aria-label="Shopping Cart"><Icons.IconShoppingCart className="h-7 w-7" /></a>
           </div>
         </div>
       )}
